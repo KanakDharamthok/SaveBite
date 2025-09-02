@@ -39,7 +39,7 @@ export function Map({ locations }: MapProps) {
                 className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
                 style={{ top: loc.top, left: loc.left }}
               >
-                <MapPin className="w-8 h-8 text-red-500 fill-current" />
+                <MapPin className="w-8 h-8 text-destructive fill-destructive/40" />
               </div>
             </TooltipTrigger>
             <TooltipContent>
