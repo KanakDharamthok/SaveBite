@@ -3,6 +3,15 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
+import { Map } from "@/components/map";
+
+const locations = [
+  { top: "25%", left: "30%", name: "City Center Hotel" },
+  { top: "50%", left: "50%", name: "The Grand Bakery" },
+  { top: "60%", left: "20%", name: "Metro Grocers" },
+  { top: "40%", left: "70%", name: "Healthy Eats Cafe" },
+  { top: "75%", left: "60%", name: "Campus Dining Hall" },
+];
 
 export function LiveMap() {
   return (
@@ -11,14 +20,7 @@ export function LiveMap() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
             <Card className="shadow-lg overflow-hidden">
-              <Image
-                src="https://picsum.photos/800/600"
-                alt="Map showing live donation locations"
-                width={800}
-                height={600}
-                className="w-full"
-                data-ai-hint="world map"
-              />
+              <Map locations={locations} />
             </Card>
           </div>
           <div className="text-center md:text-left order-1 md:order-2">
