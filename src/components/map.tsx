@@ -27,7 +27,7 @@ export function Map({ locations }: MapProps) {
     <TooltipProvider>
       <div className="relative">
         <Image
-          src="https://picsum.photos/800/600"
+          src="https://picsum.photos/seed/map/800/600"
           alt="Map of India"
           width={800}
           height={600}
