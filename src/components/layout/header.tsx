@@ -14,7 +14,7 @@ const navLinks = [
   { href: "/receive", label: "Available Food" },
   { href: "/#features", label: "Features" },
   { href: "/#how-it-works", label: "How It Works" },
-  { href: "/#community", label: "Community" },
+  { href: "/#community-stories", label: "Community" },
 ];
 
 const mockNotifications = [

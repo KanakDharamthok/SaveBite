@@ -21,7 +21,7 @@ export function Footer() {
               <ul className="space-y-2">
                 <li><Link href="#features" className="text-sm text-muted-foreground hover:text-foreground">Features</Link></li>
                 <li><Link href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground">How It Works</Link></li>
-                <li><Link href="#community" className="text-sm text-muted-foreground hover:text-foreground">Community</Link></li>
+                <li><Link href="#community-stories" className="text-sm text-muted-foreground hover:text-foreground">Community</Link></li>
                 <li><Link href="#download" className="text-sm text-muted-foreground hover:text-foreground">Download App</Link></li>
               </ul>
             </div>

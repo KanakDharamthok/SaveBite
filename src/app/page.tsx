@@ -3,11 +3,14 @@ import { Footer } from '@/components/layout/footer';
 import { Hero } from '@/components/sections/hero';
 import { Features } from '@/components/sections/features';
 import { HowItWorks } from '@/components/sections/how-it-works';
-import { Community } from '@/components/sections/community';
+import { CommunityStories } from '@/components/sections/community-stories';
 import { Download } from '@/components/sections/download';
 import { AIShelfLife } from '@/components/sections/ai-shelf-life';
 import { AIImageAnalysis } from '@/components/sections/ai-image-analysis';
 import { OurImpact } from '@/components/sections/our-impact';
+import { TopDonors } from '@/components/sections/top-donors';
+import { LiveMap } from '@/components/sections/live-map';
+import { GetInvolved } from '@/components/sections/get-involved';
 
 export default function Home() {
   return (
@@ -18,9 +21,12 @@ export default function Home() {
         <Features />
         <HowItWorks />
         <OurImpact />
+        <TopDonors />
+        <LiveMap />
         <AIImageAnalysis />
         <AIShelfLife />
-        <Community />
+        <CommunityStories />
+        <GetInvolved />
         <Download />
       </main>
       <Footer />
