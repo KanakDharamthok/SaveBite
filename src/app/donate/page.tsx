@@ -33,7 +33,7 @@ export default function DonatePage() {
     // Here you would typically handle form submission, e.g., send data to a server.
     toast({
       title: 'Food item listed!',
-      description: 'Thank you for your donation. Receivers will now be able to see your listing.',
+      description: 'Thank you for your donation. Collectors will now be able to see your listing.',
     });
   };
 
@@ -73,7 +73,7 @@ export default function DonatePage() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="foodName">Food Item(s)</Label>
+                  <Label htmlFor="foodName">Food Type</Label>
                   <Input id="foodName" type="text" placeholder="e.g., Bread, Vegetable Curry" required />
                 </div>
                 <div className="space-y-2">
@@ -85,8 +85,8 @@ export default function DonatePage() {
                   <Textarea id="pickup-address" placeholder="Enter the full address for pickup" required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="pickup-time">Best Before / Pickup By</Label>
-                  <Input id="pickup-time" type="datetime-local" required />
+                  <Label htmlFor="expiry">Expiry Date / Best Before</Label>
+                  <Input id="expiry" type="datetime-local" required />
                 </div>
                 <Button type="submit" className="w-full">
                   List Food for Donation

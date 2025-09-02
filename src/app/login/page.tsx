@@ -42,14 +42,22 @@ export default function LoginPage() {
               </div>
               <div className="space-y-2">
                 <Label>I am a</Label>
-                <RadioGroup defaultValue="receiver" name="role" className="flex items-center space-x-4">
+                <RadioGroup defaultValue="collector" name="role" className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="donor" id="donor" />
                     <Label htmlFor="donor">Donor</Label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="receiver" id="receiver" />
-                    <Label htmlFor="receiver">Receiver</Label>
+                    <RadioGroupItem value="collector" id="collector" />
+                    <Label htmlFor="collector">Collector</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="ngo" id="ngo" />
+                    <Label htmlFor="ngo">NGO</Label>
+                  </div>
+                   <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="admin" id="admin" />
+                    <Label htmlFor="admin">Admin</Label>
                   </div>
                 </RadioGroup>
               </div>

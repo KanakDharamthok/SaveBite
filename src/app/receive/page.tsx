@@ -76,7 +76,7 @@ export default function ReceivePage() {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Available Food Near You</h1>
             <p className="mt-4 text-muted-foreground md:text-lg">
-              Browse available food donations from local hotels and businesses. Reserve items for pickup.
+              Browse available food donations from local hotels and businesses. Reserve items for pickup as a collector.
             </p>
           </div>
 
