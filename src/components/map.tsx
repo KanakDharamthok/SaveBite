@@ -16,6 +16,7 @@ type Location = {
   left: string;
   name: string;
   type: 'donor' | 'receiver';
+  details: string;
 };
 
 type MapProps = {
@@ -27,12 +28,12 @@ export function Map({ locations }: MapProps) {
     <TooltipProvider>
       <div className="relative">
         <Image
-          src="https://picsum.photos/seed/map/800/600"
-          alt="Map of India"
-          width={800}
-          height={600}
-          className="w-full h-auto"
-          data-ai-hint="India map"
+          src="https://picsum.photos/seed/map-style/1200/800"
+          alt="Map of city"
+          width={1200}
+          height={800}
+          className="w-full h-auto object-cover"
+          data-ai-hint="city map"
         />
         {locations.map((loc, index) => (
           <Tooltip key={index}>
@@ -43,7 +44,7 @@ export function Map({ locations }: MapProps) {
               >
                 <MapPin
                   className={cn(
-                    'w-8 h-8',
+                    'w-8 h-8 drop-shadow-lg',
                     loc.type === 'donor'
                       ? 'text-blue-500 fill-blue-500/40'
                       : 'text-green-500 fill-green-500/40'
@@ -52,7 +53,8 @@ export function Map({ locations }: MapProps) {
               </div>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{loc.name}</p>
+              <p className="font-bold">{loc.name}</p>
+              <p>{loc.details}</p>
             </TooltipContent>
           </Tooltip>
         ))}

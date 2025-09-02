@@ -6,13 +6,13 @@ import { MapPin } from "lucide-react";
 import { Map } from "@/components/map";
 
 const locations = [
-  { top: "25%", left: "30%", name: "City Center Hotel", type: 'donor' as const },
-  { top: "50%", left: "50%", name: "The Grand Bakery", type: 'donor' as const },
-  { top: "60%", left: "20%", name: "Metro Grocers", type: 'donor' as const },
-  { top: "40%", left: "70%", name: "Healthy Eats Cafe", type: 'donor' as const },
-  { top: "75%", left: "60%", name: "Campus Dining Hall", type: 'donor' as const },
-  { top: "35%", left: "45%", name: "Community Shelter", type: 'receiver' as const },
-  { top: "65%", left: "75%", name: "NGO Food Bank", type: 'receiver' as const },
+  { top: "25%", left: "30%", name: "City Center Hotel", type: 'donor' as const, details: "5 meals" },
+  { top: "50%", left: "50%", name: "The Grand Bakery", type: 'donor' as const, details: "Pastries" },
+  { top: "60%", left: "20%", name: "Metro Grocers", type: 'donor' as const, details: "Vegetables" },
+  { top: "40%", left: "70%", name: "Healthy Eats Cafe", type: 'donor' as const, details: "3 meals" },
+  { top: "75%", left: "60%", name: "Campus Dining Hall", type: 'donor' as const, details: "15 meals" },
+  { top: "35%", left: "45%", name: "Community Shelter", type: 'receiver' as const, details: "Needs 10 meals" },
+  { top: "65%", left: "75%", name: "NGO Food Bank", type: 'receiver' as const, details: "Needs 50 meals" },
 ];
 
 export function LiveMap() {
@@ -21,7 +21,7 @@ export function LiveMap() {
       <div className="container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <Card className="shadow-lg overflow-hidden">
+            <Card className="shadow-lg overflow-hidden rounded-lg border">
               <Map locations={locations} />
             </Card>
           </div>
