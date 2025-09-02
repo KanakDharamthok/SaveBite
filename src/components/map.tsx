@@ -28,7 +28,7 @@ export function Map({ locations }: MapProps) {
     <TooltipProvider>
       <div className="relative">
         <Image
-          src="https://picsum.photos/seed/map-style/1200/800"
+          src="https://picsum.photos/seed/city-map/1200/800"
           alt="Map of city"
           width={1200}
           height={800}
