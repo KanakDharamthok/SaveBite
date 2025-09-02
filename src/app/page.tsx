@@ -7,6 +7,7 @@ import { Community } from '@/components/sections/community';
 import { Download } from '@/components/sections/download';
 import { AIShelfLife } from '@/components/sections/ai-shelf-life';
 import { AIImageAnalysis } from '@/components/sections/ai-image-analysis';
+import { OurImpact } from '@/components/sections/our-impact';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Features />
         <HowItWorks />
+        <OurImpact />
         <AIImageAnalysis />
         <AIShelfLife />
         <Community />
