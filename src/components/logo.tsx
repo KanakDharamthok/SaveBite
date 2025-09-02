@@ -10,20 +10,18 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <path
-        d="M35.2,40.8c-4.3,2.8-9.5,3.9-14.8,3.1c-5.2-0.8-9.8-3.4-13.2-7.4c-4.9-5.8-6.3-14-3.5-21.2C6,7.9,13.2,3,21.6,2.6 c8.4-0.4,16.1,4.2,20.1,11.5c1.4,2.5,2.1,5.3,2.2,8.1"
+        d="M25.5,47.5 C12.5,47.5 2.5,37.5 2.5,24.5 C2.5,11.5 12.5,1.5 25.5,1.5 C38.5,1.5 48.5,11.5 48.5,24.5 C48.5,30.5 46.5,35.5 42.5,40.5"
         fill="none"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         strokeLinecap="round"
-        strokeMiterlimit="10"
       />
       <path
-        d="M23.9,2.8c0,0,14.6,13.1,23.3,21.2"
+        d="M25.5,1.5 C20.5,10.5 20.5,20.5 30.5,24.5"
         fill="none"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         strokeLinecap="round"
-        strokeMiterlimit="10"
       />
       <text
         x="55"
