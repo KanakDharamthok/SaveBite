@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Bell, Menu, X } from "lucide-react";
+import { Bell, Menu, Map } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Logo } from "@/components/logo";
@@ -59,7 +59,13 @@ export function Header() {
         </nav>
 
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <Popover>
+          <Link href="/map">
+            <Button variant="ghost" size="icon">
+              <Map className="h-5 w-5" />
+              <span className="sr-only">Open Map</span>
+            </Button>
+          </Link>
+           <Popover>
             <PopoverTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Bell className="h-5 w-5" />

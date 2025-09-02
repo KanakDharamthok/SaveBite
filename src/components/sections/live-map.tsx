@@ -6,11 +6,13 @@ import { MapPin } from "lucide-react";
 import { Map } from "@/components/map";
 
 const locations = [
-  { top: "25%", left: "30%", name: "City Center Hotel" },
-  { top: "50%", left: "50%", name: "The Grand Bakery" },
-  { top: "60%", left: "20%", name: "Metro Grocers" },
-  { top: "40%", left: "70%", name: "Healthy Eats Cafe" },
-  { top: "75%", left: "60%", name: "Campus Dining Hall" },
+  { top: "25%", left: "30%", name: "City Center Hotel", type: 'donor' as const },
+  { top: "50%", left: "50%", name: "The Grand Bakery", type: 'donor' as const },
+  { top: "60%", left: "20%", name: "Metro Grocers", type: 'donor' as const },
+  { top: "40%", left: "70%", name: "Healthy Eats Cafe", type: 'donor' as const },
+  { top: "75%", left: "60%", name: "Campus Dining Hall", type: 'donor' as const },
+  { top: "35%", left: "45%", name: "Community Shelter", type: 'receiver' as const },
+  { top: "65%", left: "75%", name: "NGO Food Bank", type: 'receiver' as const },
 ];
 
 export function LiveMap() {
@@ -31,8 +33,8 @@ export function LiveMap() {
               Our live map shows where food is being donated and collected in real-time. Every pin is a story of waste prevented and a community helped.
             </p>
             <Button size="lg" asChild className="mt-8">
-              <Link href="/receive">
-                <MapPin className="mr-2" /> Find Food Near You
+              <Link href="/map">
+                <MapPin className="mr-2" /> View Full Map
               </Link>
             </Button>
           </div>
