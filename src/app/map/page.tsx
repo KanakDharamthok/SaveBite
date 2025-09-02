@@ -1,25 +1,40 @@
+'use client'
+
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Map } from '@/components/map';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import dynamic from 'next/dynamic';
 
 const locations = [
-    // Donors
-    { top: "15%", left: "20%", name: "City Center Hotel", type: 'donor' as const, details: "8 meals available" },
-    { top: "40%", left: "30%", name: "The Grand Bakery", type: 'donor' as const, details: "2 dozen pastries" },
-    { top: "70%", left: "15%", name: "Metro Grocers", type: 'donor' as const, details: "Surplus vegetables" },
-    { top: "30%", left: "65%", name: "Healthy Eats Cafe", type: 'donor' as const, details: "5 portions of soup" },
-    { top: "80%", left: "55%", name: "Campus Dining Hall", type: 'donor' as const, details: "20 meals available" },
-    { top: "55%", left: "50%", name: "Corner Bistro", type: 'donor' as const, details: "Leftover pasta dishes" },
-    { top: "25%", left: "80%", name: "Sushi Place", type: 'donor' as const, details: "Sushi rolls" },
+    // Donors (Mumbai area)
+    { top: "19.0760", left: "72.8777", name: "City Center Hotel", type: 'donor' as const, details: "8 meals available" },
+    { top: "19.0822", left: "72.8812", name: "The Grand Bakery", type: 'donor' as const, details: "2 dozen pastries" },
+    { top: "19.0650", left: "72.8750", name: "Metro Grocers", type: 'donor' as const, details: "Surplus vegetables" },
+
+    // Donors (Delhi area)
+    { top: "28.6139", left: "77.2090", name: "Healthy Eats Cafe", type: 'donor' as const, details: "5 portions of soup" },
+    { top: "28.6562", left: "77.2410", name: "Campus Dining Hall", type: 'donor' as const, details: "20 meals available" },
     
-    // Receivers
-    { top: "25%", left: "45%", name: "Community Shelter", type: 'receiver' as const, details: "Needs 15 meals" },
-    { top: "50%", left: "75%", name: "NGO Food Bank", type: 'receiver' as const, details: "Accepting all donations" },
-    { top: "75%", left: "30%", name: "St. Mary's Soup Kitchen", type: 'receiver' as const, details: "Needs 30 meals" },
-    { top: "60%", left: "85%", name: "Local Youth Center", type: 'receiver' as const, details: "Needs snacks & drinks" },
-    { top: "85%", left: "80%", name: "Downtown Drop-in Center", type: 'receiver' as const, details: "Needs 12 meals" },
+    // Donors (Bangalore area)
+    { top: "12.9716", left: "77.5946", name: "Corner Bistro", type: 'donor' as const, details: "Leftover pasta dishes" },
+    { top: "12.9784", left: "77.6408", name: "Sushi Place", type: 'donor' as const, details: "Sushi rolls" },
+    
+    // Receivers (Mumbai area)
+    { top: "19.0780", left: "72.8850", name: "Community Shelter", type: 'receiver' as const, details: "Needs 15 meals" },
+
+    // Receivers (Delhi area)
+    { top: "28.6304", left: "77.2177", name: "NGO Food Bank", type: 'receiver' as const, details: "Accepting all donations" },
+    { top: "28.5900", left: "77.2100", name: "St. Mary's Soup Kitchen", type: 'receiver' as const, details: "Needs 30 meals" },
+
+    // Receivers (Bangalore area)
+    { top: "12.9698", left: "77.6393", name: "Local Youth Center", type: 'receiver' as const, details: "Needs snacks & drinks" },
+    { top: "12.9545", left: "77.6224", name: "Downtown Drop-in Center", type: 'receiver' as const, details: "Needs 12 meals" },
 ];
+
+const MapWithNoSSR = dynamic(() => import('@/components/map').then(mod => mod.Map), {
+  ssr: false,
+});
 
 
 export default function MapPage() {
@@ -37,7 +52,7 @@ export default function MapPage() {
             </CardHeader>
             <CardContent>
               <div className="rounded-lg overflow-hidden border">
-                <Map locations={locations} />
+                <MapWithNoSSR locations={locations} />
               </div>
             </CardContent>
           </Card>
