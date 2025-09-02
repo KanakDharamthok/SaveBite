@@ -28,11 +28,11 @@ export function Map({ locations }: MapProps) {
       <div className="relative">
         <Image
           src="https://picsum.photos/800/600"
-          alt="Map of the area"
+          alt="Map of India"
           width={800}
           height={600}
           className="w-full h-auto"
-          data-ai-hint="city map"
+          data-ai-hint="India map"
         />
         {locations.map((loc, index) => (
           <Tooltip key={index}>
