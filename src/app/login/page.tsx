@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { useRouter } from "next/navigation";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -38,6 +39,19 @@ export default function LoginPage() {
               <div className="space-y-2">
                 <Label htmlFor="phone">Phone Number</Label>
                 <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" required />
+              </div>
+              <div className="space-y-2">
+                <Label>I am a</Label>
+                <RadioGroup defaultValue="receiver" name="role" className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="donor" id="donor" />
+                    <Label htmlFor="donor">Donor</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="receiver" id="receiver" />
+                    <Label htmlFor="receiver">Receiver</Label>
+                  </div>
+                </RadioGroup>
               </div>
               <Button type="submit" className="w-full">
                 Login
