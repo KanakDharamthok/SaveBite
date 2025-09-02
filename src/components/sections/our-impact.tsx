@@ -36,7 +36,7 @@ export function OurImpact() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {impactStats.map((stat, index) => (
-            <Card key={index} className="text-center bg-card shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-center p-6">
+            <Card key={index} className="text-center bg-card shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-center p-6">
                 <div className="flex justify-center mb-4">
                     <div className="bg-primary/10 p-3 rounded-full">
                         {stat.icon}

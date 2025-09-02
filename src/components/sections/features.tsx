@@ -36,7 +36,7 @@ export function Features() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {features.map((feature, index) => (
-            <Card key={index} className="text-center bg-card shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card key={index} className="text-center bg-card shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <CardHeader className="items-center">
                 <div className="bg-primary/10 p-3 rounded-full">
                   {feature.icon}

@@ -41,7 +41,7 @@ export function HowItWorks() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {steps.map((step) => (
             <div key={step.step} className="relative">
-              <Card className="text-center p-6 h-full transition-transform transform hover:-translate-y-2">
+              <Card className="text-center p-6 h-full transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
                 <CardHeader className="items-center">
                   <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
                     {step.icon}
