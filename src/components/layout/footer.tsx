@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Github, Twitter } from "lucide-react";
+import { Facebook, Github, Twitter, Instagram } from "lucide-react";
 import { Logo } from "@/components/logo";
 
 export function Footer() {
@@ -48,6 +48,7 @@ export function Footer() {
             <a href="#" className="text-muted-foreground hover:text-foreground"><Twitter className="h-5 w-5" /></a>
             <a href="#" className="text-muted-foreground hover:text-foreground"><Facebook className="h-5 w-5" /></a>
             <a href="#" className="text-muted-foreground hover:text-foreground"><Github className="h-5 w-5" /></a>
+            <a href="#" className="text-muted-foreground hover:text-foreground"><Instagram className="h-5 w-5" /></a>
           </div>
         </div>
       </div>
