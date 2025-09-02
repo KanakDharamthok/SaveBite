@@ -4,7 +4,6 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Map } from '@/components/map';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import dynamic from 'next/dynamic';
 
 const locations = [
     // Donors (Mumbai area)
@@ -32,10 +31,6 @@ const locations = [
     { top: "12.9545", left: "77.6224", name: "Downtown Drop-in Center", type: 'receiver' as const, details: "Needs 12 meals" },
 ];
 
-const MapWithNoSSR = dynamic(() => import('@/components/map').then(mod => mod.Map), {
-  ssr: false,
-});
-
 
 export default function MapPage() {
   return (
@@ -52,7 +47,7 @@ export default function MapPage() {
             </CardHeader>
             <CardContent>
               <div className="rounded-lg overflow-hidden border">
-                <MapWithNoSSR locations={locations} />
+                <Map locations={locations} />
               </div>
             </CardContent>
           </Card>
