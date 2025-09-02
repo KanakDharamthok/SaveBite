@@ -2,6 +2,7 @@
 
 import { getShelfLife as getShelfLifeFlow, GetShelfLifeInput } from '@/ai/flows/ai-shelf-life-assistant';
 import { analyzeFridgeImage as analyzeFridgeImageFlow, AnalyzeFridgeImageInput } from '@/ai/flows/ai-powered-image-analysis';
+import { getAppGuidance as getAppGuidanceFlow, GetAppGuidanceInput } from '@/ai/flows/app-guide-assistant';
 import { z } from 'zod';
 
 const shelfLifeSchema = z.object({
@@ -47,5 +48,28 @@ export async function analyzeFridgeImage(formData: FormData) {
   } catch (e) {
     console.error(e);
     return { error: 'An error occurred during image analysis. Please try again.' };
+  }
+}
+
+const appGuidanceSchema = z.object({
+  query: z.string().min(2, "Please enter a question."),
+});
+
+export async function getAppGuidance(formData: FormData) {
+  try {
+    const validatedFields = appGuidanceSchema.safeParse({
+      query: formData.get('query'),
+    });
+
+    if (!validatedFields.success) {
+      return { error: 'Invalid input.' };
+    }
+
+    const input: GetAppGuidanceInput = { query: validatedFields.data.query };
+    const result = await getAppGuidanceFlow(input);
+    return { data: result };
+  } catch (e) {
+    console.error(e);
+    return { error: 'An AI error occurred. Please try again.' };
   }
 }

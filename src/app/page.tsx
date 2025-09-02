@@ -11,6 +11,7 @@ import { OurImpact } from '@/components/sections/our-impact';
 import { TopDonors } from '@/components/sections/top-donors';
 import { LiveMap } from '@/components/sections/live-map';
 import { GetInvolved } from '@/components/sections/get-involved';
+import { AppGuide } from '@/components/sections/app-guide';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <LiveMap />
         <AIImageAnalysis />
         <AIShelfLife />
+        <AppGuide />
         <CommunityStories />
         <GetInvolved />
         <Download />
